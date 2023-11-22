@@ -41,7 +41,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	adaptability: {
 		onModifyMove(move) {
-			move.stab = 2;
+			move.stab = 1.8;
 		},
 		name: "Adaptability",
 		rating: 4,
@@ -984,7 +984,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifyAtk(atk, attacker, defender, move) {
 			if (move.type === 'Dragon') {
 				this.debug('Dragon\'s Maw boost');
-				return this.chainModify(1.5);
+				return this.chainModify(1.25);
 			}
 		},
 		onModifySpAPriority: 5,
@@ -1219,7 +1219,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onBasePowerPriority: 19,
 		onBasePower(basePower, attacker, defender, move) {
 			if (attacker.status === 'brn' && move.category === 'Special') {
-				return this.chainModify(1.5);
+				return this.chainModify(1.4);
 			}
 		},
 		name: "Flare Boost",
@@ -2402,7 +2402,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onBasePowerPriority: 19,
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags['pulse']) {
-				return this.chainModify(1.5);
+				return this.chainModify(1.25);
 			}
 		},
 		name: "Mega Launcher",
@@ -3687,7 +3687,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifyAtk(atk, attacker, defender, move) {
 			if (move.type === 'Rock') {
 				this.debug('Rocky Payload boost');
-				return this.chainModify(1.5);
+				return this.chainModify(1.25);
 			}
 		},
 		onModifySpAPriority: 5,
@@ -3929,7 +3929,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags['slicing']) {
 				this.debug('Shapness boost');
-				return this.chainModify(1.5);
+				return this.chainModify(1.25);
 			}
 		},
 		name: "Sharpness",
@@ -4290,7 +4290,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifyAtk(atk, attacker, defender, move) {
 			if (move.type === 'Steel') {
 				this.debug('Steelworker boost');
-				return this.chainModify(1.5);
+				return this.chainModify(1.25);
 			}
 		},
 		onModifySpAPriority: 5,
@@ -4309,7 +4309,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onAllyBasePower(basePower, attacker, defender, move) {
 			if (move.type === 'Steel') {
 				this.debug('Steely Spirit boost');
-				return this.chainModify(1.5);
+				return this.chainModify(1.25);
 			}
 		},
 		name: "Steely Spirit",
@@ -4378,7 +4378,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onBasePowerPriority: 19,
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags['bite']) {
-				return this.chainModify(1.5);
+				return this.chainModify(1.25);
 			}
 		},
 		name: "Strong Jaw",
@@ -4747,7 +4747,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onBasePowerPriority: 19,
 		onBasePower(basePower, attacker, defender, move) {
 			if ((attacker.status === 'psn' || attacker.status === 'tox') && move.category === 'Physical') {
-				return this.chainModify(1.5);
+				return this.chainModify(1.4);
 			}
 		},
 		name: "Toxic Boost",

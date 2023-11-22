@@ -20385,13 +20385,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {mirror: 1},
 		pseudoWeather: 'trickroom',
 		condition: {
-			duration: 5,
+			duration: 0,
 			durationCallback(source, effect) {
 				if (source?.hasAbility('persistent')) {
 					this.add('-activate', source, 'ability: Persistent', '[move] Trick Room');
-					return 7;
+					return 0;
 				}
-				return 5;
+				return 0;
 			},
 			onFieldStart(target, source) {
 				if (source?.hasAbility('persistent')) {
@@ -21424,13 +21424,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {mirror: 1},
 		pseudoWeather: 'wonderroom',
 		condition: {
-			duration: 5,
+			duration: 0,
 			durationCallback(source, effect) {
 				if (source?.hasAbility('persistent')) {
 					this.add('-activate', source, 'ability: Persistent', '[move] Wonder Room');
-					return 7;
+					return 0;
 				}
-				return 5;
+				return 0;
 			},
 			onModifyMove(move, source, target) {
 				// This code is for moves that use defensive stats as the attacking stat; see below for most of the implementation

@@ -144,7 +144,7 @@ export class Field {
 			duration: status.duration,
 		};
 		if (status.durationCallback) {
-			this.terrainState.duration = status.durationCallback.call(this.battle, source, source, sourceEffect);
+			this.terrainState.duration = 0;//status.durationCallback.call(this.battle, source, source, sourceEffect);
 		}
 		if (!this.battle.singleEvent('FieldStart', status, this.terrainState, this, source, sourceEffect)) {
 			this.terrain = prevTerrain;
