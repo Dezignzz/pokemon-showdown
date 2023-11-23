@@ -5770,6 +5770,21 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "DUU",
 		natDexTier: "UU",
 	},
+	mamokou: {
+		tier: "RU",
+		doublesTier: "DUU",
+		natDexTier: "RU",
+	},
+	chandeltei: {
+		tier: "UU",
+		doublesTier: "DUU",
+		natDexTier: "RU",
+	},
+	glacecune: {
+		tier: "UU",
+		doublesTier: "DUU",
+		natDexTier: "UU",
+	},
 	missingno: {
 		isNonstandard: "Custom",
 		tier: "Illegal",

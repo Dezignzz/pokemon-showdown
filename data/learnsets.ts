@@ -90840,6 +90840,30 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	ogerponcornerstone: {
 		eventOnly: true,
 	},
+	mamokou: {
+		learnset: {
+			iciclecrash: ["9M"],
+			spark: ["9M"],
+			earthquake: ["8M"],
+			crunch: ["7V"],
+		},
+	},
+	chandeltei: {
+		learnset: {
+			flamethrower: ["9M"],
+			shadowball: ["9M"],
+			energyball: ["8M"],
+			darkpulse: ["7V"],
+		},
+	},
+	glacecune: {
+		learnset: {
+			freezedry: ["9M"],
+			scald: ["9M"],
+			shadowball: ["8M"],
+			calmmind: ["7V"],
+		},
+	},
 	syclar: {
 		learnset: {
 			absorb: ["9L1", "8L1", "7L1"],
