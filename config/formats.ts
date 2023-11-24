@@ -2094,7 +2094,8 @@ export const Formats: FormatList = [
 
 		mod: 'gen9',
 		gameType: 'doubles',
-		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Moves Clause', 'Evasion Abilities Clause', 'Species Clause', 'Gravity Sleep Clause'],
+		//ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Moves Clause', 'Evasion Abilities Clause', 'Species Clause', 'Gravity Sleep Clause'],
+		ruleset: ['Standard NatDex', 'Sleep Clause Mod', 'OHKO Clause', 'Dynamax Clause', 'CFZ Clause', '!Obtainable'],
 		banlist: [
 			'Annihilape', 'Arceus', 'Calyrex-Ice', 'Calyrex-Shadow', 'Dialga', 'Dialga-Origin', 'Eternatus', 'Genesect', 'Gengar-Mega', 'Giratina', 'Giratina-Origin', 'Groudon',
 			'Ho-Oh', 'Koraidon', 'Kyogre', 'Kyurem-White', 'Lugia', 'Lunala', 'Magearna', 'Melmetal', 'Mewtwo', 'Miraidon', 'Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane',
@@ -2120,6 +2121,42 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
+		ruleset: ['Standard NatDex', 'Sleep Clause Mod', 'OHKO Clause', 'Dynamax Clause', 'CFZ Clause', '!Obtainable'],
+		banlist: [
+			'Eternatus-Eternamax', 'Groudon-Primal', 'Rayquaza-Mega', 'Shedinja', 'Cramorant-Gorging', 'Calyrex-Shadow', 'Darmanitan-Galar-Zen',
+			'Contrary', 'Gorilla Tactics', 'Huge Power', 'Moody', 'Parental Bond', 'Pure Power',
+			'Wonder Guard', 'Bolt Beak', 'Double Iron Bash',
+			'Octolock', 'Revival Blessing', 'Outrage', 'Petal Dance', 'Raging Fury', 'Thrash', 'Rollout', 'Ice Ball', 'Comatose + Sleep Talk', 'Imprison + Transform',
+		],
+		restricted: ['Arceus'],
+		onValidateTeam(team, format) {
+			// baseSpecies:count
+			const restrictedPokemonCount = new Map<string, number>();
+			for (const set of team) {
+				const species = this.dex.species.get(set.species);
+				if (!this.ruleTable.isRestrictedSpecies(species)) continue;
+				restrictedPokemonCount.set(species.baseSpecies, (restrictedPokemonCount.get(species.baseSpecies) || 0) + 1);
+			}
+			for (const [baseSpecies, count] of restrictedPokemonCount) {
+				if (count > 1) {
+					return [
+						`You are limited to one ${baseSpecies} forme.`,
+						`(You have ${count} ${baseSpecies} forme${count === 1 ? '' : 's'}.)`,
+					];
+				}
+			}
+		},
+	},
+	{
+		name: "[Gen 9] National Dex BH Doubles",
+		desc: `Balanced Hackmons with National Dex elements mixed in.`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3711099/">National Dex BH</a>`,
+		],
+
+		mod: 'gen9',
+		gameType: 'doubles',
 		searchShow: false,
 		ruleset: ['Standard NatDex', 'Sleep Clause Mod', 'OHKO Clause', 'Dynamax Clause', 'CFZ Clause', '!Obtainable'],
 		banlist: [
