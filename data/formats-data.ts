@@ -485,7 +485,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "DUU",
 		natDexTier: "RU",
 	},
-	arcaninealola: {
+	antarcanine: {
 		tier: "UU",
 		doublesTier: "DUU",
 		natDexTier: "UU",

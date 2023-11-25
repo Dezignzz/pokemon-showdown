@@ -1448,8 +1448,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoType: "useItem",
 		evoItem: "Fire Stone",
 		eggGroups: ["Field"],
-		otherFormes: ["Arcanine-Hisui", "Arcanine-Alola"],
-		formeOrder: ["Arcanine", "Arcanine-Hisui", "Arcanine-Alola"],
+		otherFormes: ["Arcanine-Hisui", "Antarcanine"],
+		formeOrder: ["Arcanine", "Arcanine-Hisui", "Antarcanine"],
 	},
 	arcaninehisui: {
 		num: 59,
@@ -1468,9 +1468,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoItem: "Fire Stone",
 		eggGroups: ["Field"],
 	},
-	arcaninealola: {
+	antarcanine: {
 		num: 59,
-		name: "Arcanine-Alola",
+		name: "Antarcanine",
 		baseSpecies: "Arcanine",
 		forme: "Alola",
 		types: ["Ice", "Fire"],

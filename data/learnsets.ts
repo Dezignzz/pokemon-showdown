@@ -8691,7 +8691,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			willowisp: ["9M"],
 		},
 	},
-	arcaninealola: {
+	antarcanine: {
 		learnset: {
 			aerialace: ["9M", "7M", "6M", "5M", "4M", "3M"],
 			agility: ["9M", "9L1", "8M", "8L1"],
